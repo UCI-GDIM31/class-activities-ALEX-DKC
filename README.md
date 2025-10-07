@@ -4,7 +4,9 @@
 Write your W1 activity Devlog here.
 
 ### W2
-Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
+1,Because color values use decimals between 0.0 and 1.0.
+2£¬Because it counts how many times the ball bounces: 1, 2, 3
+3£¬I add a ";"because it is the end of the sentence.
 
 ## Open-Source Assets
 ### W1
