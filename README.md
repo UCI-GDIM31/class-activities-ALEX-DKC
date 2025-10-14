@@ -9,11 +9,20 @@ Write your W1 activity Devlog here.
 3£¬I add a ";"because it is the end of the sentence.
 
 ### W3
-I belong to Table 5, and I will be answering question 1.
+1, I belong to Table 5, and I will be answering question 1.
 Q: You¡¯re building a rhythm game, and you¡¯re writing a method named DidPlayerHitBeat that tells you whether or not the player accurately hit a beat based on the time that they pressed a key.
 The input will include float x and float y. Float x refers to the moment when player's finger touches the screen. Float y refers to the moment when player's finger leaves the screen. In the body part of the method, we will substract y from x to obtain float z. If z is greater than 0.2s, then bool whetherHit equals true. The boolean type whetherHit variable will be the output.
 Input: float x (touch time); float y (leave time)
 Output type: boolean
+
+2,
+Think of a class like a menu in a restaurant. The menu shows what kinds of dishes you can make.
+when you use the class as a Component, it¡¯s like the chef cooking a real dish from that menu.
+Member variables are like the ingredients of the dish ¡ª how spicy it is, how much sauce it has, or how big it is.
+Methods are like the actions the chef does ¡ª mixing, frying, or boiling. They are what the dish can do.
+
+3,
+The balls become too bright because the color keeps getting multiplied again and again every time they bounce.When the number is too big, the ball looks extremely bright, just become white.
 
 ## Open-Source Assets
 ### W1
