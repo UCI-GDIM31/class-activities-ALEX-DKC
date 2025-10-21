@@ -26,11 +26,11 @@ The balls become too bright because the color keeps getting multiplied again and
 
 ### W4
 1,
-	[SerializeField] private float _moveSpeed = 1.0f;
+5	[SerializeField] private float _moveSpeed = 1.0f;
 _moveSpeed is a number varaible, the type is flost and value is one, the value is showed it on the inpector and can be editted
-	float translation = Input.GetAxis("Vertical") * _moveSpeed * Time.deltaTime;
+22	float translation = Input.GetAxis("Vertical") * _moveSpeed * Time.deltaTime;
 the float varaible is translation, and value is Input.GetAxis("Vertical") which is a method call time movespeed time the time between frames.
-	transform.Translate(0, 0, translation);
+25	transform.Translate(0, 0, translation);
 This line is calling a method called Translate on the Transform component. The inputs parameters are 0, 0, and translation
 
 
