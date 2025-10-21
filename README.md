@@ -25,7 +25,7 @@ Methods are like the actions the chef does ¡ª mixing, frying, or boiling. They a
 The balls become too bright because the color keeps getting multiplied again and again every time they bounce.When the number is too big, the ball looks extremely bright, just become white.
 
 ### W4
-1,
+
 5	[SerializeField] private float _moveSpeed = 1.0f;
 _moveSpeed is a number varaible, the type is flost and value is one, the value is showed it on the inpector and can be editted
 22	float translation = Input.GetAxis("Vertical") * _moveSpeed * Time.deltaTime;
@@ -33,6 +33,14 @@ the float varaible is translation, and value is Input.GetAxis("Vertical") which 
 25	transform.Translate(0, 0, translation);
 This line is calling a method called Translate on the Transform component. The inputs parameters are 0, 0, and translation
 
+1,What solution did you come up with for the collider activity, and why? Specifically- which objects did you add Rigidbodies to, and which object(s) did you check Is Trigger on?
+Added Rigidbody to Cat and SoccerBall.
+Checked Is Trigger on Goal so the ball can pass through but still trigger scoring.
+Did not check Is Trigger on Cat, Ball to allow real collisions and bounces.
+
+2,iF your game did not work perfectly the first time you tested it, talk about what you had to fix.
+ Colliders were too big, so I resized them to match the objects.
+the cat is rolling, froze X and Z rotation on the rigidbodies to keep them stable.
 
 
 ## Open-Source Assets

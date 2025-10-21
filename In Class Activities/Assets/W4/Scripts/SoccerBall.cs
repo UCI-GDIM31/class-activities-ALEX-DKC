@@ -7,6 +7,8 @@ public class SoccerBall : MonoBehaviour
     [SerializeField] private TMP_Text _pointsText;
     [SerializeField] private TMP_Text _timeText;
     [SerializeField] private ParticleSystem _goalVFX;
+    [SerializeField] private int _points;
+    public float _timeSinceGoal;
 
     // STEP 1 -----------------------------------------------------------------
     // The OnTriggerEnter method is a collision method called by Unity that
@@ -32,6 +34,7 @@ public class SoccerBall : MonoBehaviour
         if (other.CompareTag("Goal"))
         {
             _goalVFX.Play();
+            MadeGoal () ; 
         }
     }
     // STEP 2 -------------------------------------------------------------
@@ -42,7 +45,13 @@ public class SoccerBall : MonoBehaviour
     // Then, move your Debug.Log() statement so that it's only called if
     //      the colliding object has the "Goal" tag.
 
-
+    private void MadeGoal()
+    {
+        _points++;
+        _pointsText.text = "points:" + _points;
+        Debug.Log("the ball collided with Goal");
+        _timeSinceGoal = 0;
+    }
     // STEP 2 -------------------------------------------------------------
     //}
 
@@ -84,7 +93,9 @@ public class SoccerBall : MonoBehaviour
     // You will need to:
     //      1. Create a new member variable to keep track of the points.
     //      2. Use your MadeGoal method to update the points and text.
-    //
+
+
+
     // STEP 5 -----------------------------------------------------------------
 
 
@@ -102,5 +113,16 @@ public class SoccerBall : MonoBehaviour
     //              and update _timeText with the new time.
     //      2. Use the MadeGoal method to reset your
     //              time variable when the player makes a goal. 
-    // STEP 6 -----------------------------------------------------------------
+
+    private void Update()
+    {
+        _timeSinceGoal += Time.deltaTime;
+        _timeText.text = "Time since goal: " + _timeSinceGoal;
+
+         
+       }
 }
+
+
+    // STEP 6 -----------------------------------------------------------------
+
