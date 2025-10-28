@@ -52,7 +52,7 @@ public class CatW5 : MonoBehaviour
 
         Vector3 translation = Vector3.forward;
 
-        if (_flipWSControls)
+            if (_flipWSControls)
         {
             translation *= -1;
         }
