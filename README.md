@@ -42,6 +42,19 @@ Did not check Is Trigger on Cat, Ball to allow real collisions and bounces.
  Colliders were too big, so I resized them to match the objects.
 the cat is rolling, froze X and Z rotation on the rigidbodies to keep them stable.
 
+### W5
+1, what exactly does gameObject refer to?
+gameObject means the thing this script is attached to. Every script we write in Unity like Player, Enemy, CatW5 is a component that lives on a GameObject in our scene.
+
+ transform.Translate means £¿
+ move this object by some amount£¬move along the x, y, z axes
+
+2,
+varaible_moveSpeed is how fast the deer moves
+Methods: Update() is a Unity method that runs every frame
+it move the deer forward every frame by using transform.Translate(Vector3.forward * _moveSpeed * Time.deltaTime)
+
+
 
 ## Open-Source Assets
 ### W1
