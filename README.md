@@ -50,9 +50,9 @@ gameObject means the thing this script is attached to. Every script we write in 
  move this object by some amount£¬move along the x, y, z axes
 
 2,
-varaible_moveSpeed is how fast the deer moves
-Methods: Update() is a Unity method that runs every frame
-it move the deer forward every frame by using transform.Translate(Vector3.forward * _moveSpeed * Time.deltaTime)
+varaible: _destination is the target location the deer should walk toward
+Methods: Start()Runs once at the beginning.
+Use GetComponent NavMeshAgent to find the NavMeshAgent on the same GameObject.Tell it where to go using SetDestination()
 
 
 
