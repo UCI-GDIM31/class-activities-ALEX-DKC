@@ -7,18 +7,16 @@ using UnityEngine.AI;
 // If you copied the class declaration from CatW5, you'd only need to change one thing...
 public class DeerW5 : MonoBehaviour
 {
-    [SerializeField] private bool _flipWSControls;
-    [SerializeField] private float _moveSpeed = 3.0f;
-    [SerializeField] private float _turnSpeed = 180.0f;
-    [SerializeField] private Animator _animator;
+        
+    [SerializeField] private Transform _destination;
 
-    private string _isWalkingName = "IsWalking";
-
-    private void Update()
+    private void Start()
     {
-        Vector3 translation = Vector3.forward;
-        transform.Translate(translation * _moveSpeed * Time.deltaTime);
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.SetDestination(_destination.position);
     }
+
+
 
 
 
