@@ -54,6 +54,74 @@ varaible: _destination is the target location the deer should walk toward
 Methods: Start()Runs once at the beginning.
 Use GetComponent NavMeshAgent to find the NavMeshAgent on the same GameObject.Tell it where to go using SetDestination()
 
+### W6
+1, 
+(Outline of MajorTopics
+Unity Engine
+gameObject W4
+Component W4
+Hierarchy MG1
+Scene
+Script
+Inspector MG1
+Tag W4
+NavMash W5, Mini5
+Transform W4, W5 Pre
+Terrain W5, Mini5
+
+Unity Coding
+Start() W4pre
+Update() W4pre
+Monobehavior W3, W5pre
+OnCollisionEnter2D W4
+gameObject
+Other
+trigger
+GetKey W5pre 
+GetComponent<> W5pre
+Debug.Log() to output in the console W2, W4pre
+Vector3 W5, W5pre
+Transform.position W5, W5pre
+Time.deltatime W4
+
+General C# Coding
+Variable, types, names, value W2
+Int, float, boolean, string 
+Variable scope W3
+Methods W3
+Class W3, W4
+    i. data (variables)  & actions (methods)
+If statement W2
+Else if statement
+Conditions
+&&, ||
+==, >=, <=, >, <
+For loop W6pre
+Private and public
+Calculation W2
++, -, *, /
++=, -=, *=, /=
+How to write notes // or /* */
+; must appear at the end of a line W2
+Array W6pre
+
+Math
+Vector (W5 & W5 pre-learning)
+Magnitude
+Direction
+
+Other tools
+Github
+NavMesh / AI Movement W5
+itch.io W1
+Collider & Rigidbody W4
+Vs code W5pre
+W3school website W6pre
+Sam Roberts :) GDIM51)
+[https://docs.google.com/document/d/1exNqQE_zGuOoztND9FT3ldDwkXjJ6m8a8oRDWERaMyg/edit?tab=t.0]
+
+2, The BatW6 class needs both a Unity-provided method (Update()) and two custom methods (EnableChase() and DisableChase()).
+Update() should come from Unity to handle continuous movement each frame, while EnableChase() and DisableChase() are custom helper methods that you write to control when the bat should start or stop chasing the player.
 
 
 ## Open-Source Assets
