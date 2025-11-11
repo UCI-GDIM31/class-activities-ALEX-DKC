@@ -28,7 +28,8 @@ public class BatManager : MonoBehaviour
     // ------------------------------------------------------------------------
     private void Start()
     {
-        // STEP 6 -------------------------------------------------------------
+        // STEP
+        // -------------------------------------------------------------
         // Uncomment and FIX the below line to initialize _newTextTimers as a
         //      float array with the same length as _bats.
         // This array is used to keep track of all of the bats in the Scene

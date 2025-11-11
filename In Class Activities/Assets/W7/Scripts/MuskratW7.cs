@@ -46,7 +46,8 @@ public class MuskratW7 : MonoBehaviour
         // You might want to look below Step 3 for an example :D
         
         float leftright = Input.GetAxis("Horizontal");
-        
+        Vector3 muskratUpWorld = transform.TransformDirection(Vector3.up);
+        transform.RotateAround(transform.position, muskratUpWorld, leftright * _rotationSpeed * Time.deltaTime);
 
 
         // STEP 3 -------------------------------------------------------------
@@ -66,6 +67,14 @@ public class MuskratW7 : MonoBehaviour
         // The Muskrat should never play the "flying" animation while on a
         //      bubble.
 
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+        bool isMovingOnBubble = Mathf.Abs(h) > 0.05f || Mathf.Abs(v) > 0.05f;
+
+        // 泡泡上不播放飞行动画
+        _animator.SetBool("flying", false);
+        // 有输入就算“在走”（围着球体移动/转动）
+        _animator.SetBool("running", isMovingOnBubble);
 
         // STEP 5 -------------------------------------------------------------
     }
@@ -86,7 +95,7 @@ public class MuskratW7 : MonoBehaviour
         //      like up, left, right, or forward.
 
         float leftright = Input.GetAxis("Horizontal");
-
+        transform.Rotate(Vector3.up * leftright * _rotationSpeed * Time.deltaTime);
         // STEP 1 -------------------------------------------------------------
 
 
@@ -96,7 +105,7 @@ public class MuskratW7 : MonoBehaviour
         // This line of code is incorrect. 
         // Replace it with a different line of code that uses 'movement' to
         //      move the Muskrat forwards and backwards.
-        transform.position += movement * Vector3.forward * _moveSpeed * Time.deltaTime;
+        transform.position += movement * transform.forward * _moveSpeed * Time.deltaTime;
 
         // STEP 2 -------------------------------------------------------------
 
@@ -108,7 +117,15 @@ public class MuskratW7 : MonoBehaviour
         // You may also find the absolute value method, Mathf.Abs(), helpful:
         //      https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Mathf.Abs.html
 
-        
+        bool isAirborne = Mathf.Abs(_rigidbody.linearVelocity.y) > 0.1f;
+        _animator.SetBool("flying", isAirborne);
+
+        // 2) 走：地面模式时，不用 linearVelocity（因为你用 transform.position 移动）
+        //    直接根据按键输入来判断是否在走
+        float moveInput = Input.GetAxis("Vertical");
+        bool isRunningOnGround = !isAirborne && Mathf.Abs(moveInput) > 0.05f;
+        _animator.SetBool("running", isRunningOnGround);
+
         // STEP 4 -------------------------------------------------------------
     }
 

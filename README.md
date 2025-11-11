@@ -129,7 +129,13 @@ Update() should come from Unity to handle continuous movement each frame, while 
 
 The methods in the BatW6 class should control when the bat starts or stops chasing the player and handle the bat’s movement toward the player every frame.
 
+
+### W7
+1, https://docs.google.com/document/d/1TsVke4FYWiPQJM1o9TWKmZdGuEjed6uXTYwZxrXfC3I/edit?tab=t.0 （UI）
+2,The code used world-space forward (Vector3.forward) instead of the Muskrat’s local forward (transform.forward), so the Muskrat wouldn’t move in the direction it was facing.
+
+
 ## Open-Source Assets
-### W1
+
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
 - Low-poly environment: https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153 
